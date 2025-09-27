@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عدن</title>
+
+  <!-- رابط الخط يجب أن يكون أولًا -->
+
+  <!-- ملف CSS الخاص بك -->
+  <link rel="stylesheet" href="../css/aden.css">
+</head>
+
+
+<body>
+
+  <header>
+    <h1>مدينة عدن</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="sanaa.html">صنعاء</a></li>
+      <li><a href="aden.html">عدن</a></li>
+      <li><a href="ibb.html">إب</a></li>
+      <li class="nav-item"><a href="contact.html">تواصل معنا</a></li>
+
+    </ul>
+  </nav>
+
+  <main>
+    <section class="intro" class="text-center">
+      <h2 >نبذه عن مدينه عدن</h2>
+      <p>
+        عدن مدينة ساحلية شهيرة بمينائها الجميل وبحورها الرائعة،
+        وتشتهر بالمأكولات البحرية والكرم وحفاوة الضيافة.
+      </p>
+    </section>
+<!-- زر لفتح المودال -->
+
+<!-- مودال Bootstrap -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md"> <!-- حجم متوسط -->
+    <div class="modal-content p-3" style="background-color: white; color: white;"> <!-- خلفية + لون النص -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title fs-4 fw-bold">أهلاً وسهلاً!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        <!-- سيتم تغيير المحتوى هنا -->
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- مودال Bootstrap -->
+<div class="modal fade" id="welcomeModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-md"> <!-- حجم متوسط -->
+    <div class="modal-content p-3" style="background-color: white; color: white;"> <!-- خلفية أبيض + padding -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-primary fs-4 fw-bold">أهلاً وسهلاً!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body" id="modalContent1">
+        <!-- سيتم تغيير المحتوى هنا -->
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <section class="cards-container">
+      <!-- البحر -->
+      <div class="card">
+        <img src="../images/البحر.jpeg" alt="البحر في عدن">
+        <div class="card-body">
+          <h3>البحر</h3>
+          <p>شواطئ عدن تعتبر من أجمل شواطئ اليمن وتستقطب الزوار للسباحة والاسترخاء.</p>
+          <button id="welcomeBtn" class="btn">اضغط هنا لمعرفه المزيد</button>
+
+        </div>
+      </div>
+
+      <!-- الميناء -->
+      <div class="card">
+        <img src="../images/ميناء عدن.jpeg" alt="ميناء عدن">
+        <div class="card-body">
+          <h3>الميناء</h3>
+          <p>ميناء عدن التاريخي يعتبر نقطة مهمة للتجارة منذ قرون ويتميز بالحركة والنشاط.</p>
+                    <button id="welcomeBtn1" class="btn">اضغط هنا لمعرفه المزيد</button>
+
+        </div>
+      </div>
+
+      <!-- الأكلات الشعبية -->
+      <div class="container">
+       
+        
+        <div class="gallery">
+            <!-- الصورة الرئيسية -->
+            <div class="main-image" id="mainImage">
+                <img src="../images\123 (4).jpg" alt="الصورة الرئيسية" id="mainImg">
+            </div>
+            
+            <!-- الصور المصغرة -->
+            <div class="thumbnails">
+                <div class="thumbnail active" data-src="https://via.placeholder.com/1200x600/4CAF50/FFFFFF?text=الصورة+الرئيسية">
+                    <img src="../images\123 (2).jpg" alt="الصنف 1">
+                </div>
+                <div class="thumbnail" data-src="https://via.placeholder.com/1200x600/2196F3/FFFFFF?text=الصنف+2">
+                    <img src="../images\123 (3).jpg" alt="الصنف 2">
+                </div>
+                <div class="thumbnail" data-src="https://via.placeholder.com/1200x600/FF9800/FFFFFF?text=الصنف+3">
+                    <img src="../images\123 (1).jpg" alt="الصنف 3">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    </section>
+  </main>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025</p>
+  </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('#welcomeBtn').on('click', function() {
+    // محتوى المودال مباشرةً هنا
+    var welcomeMessage = `
+      <p>مرحباً بك في موقعنا! 😊</p>
+      <p>يقع خليج عدن جنوب اليمن على الساحل الجنوبي لشبه الجزيرة العربية، يربط المحيط الهندي بالبحر الأحمر، يطل على 3 دول هي اليمن من الشمال وجيبوتي من الشرق والصومال من الجنوب، كما يضم ممرين مائيين هما مضيق باب المندب وقناة السويس.
+
+يبلغ متوسط عمق خليج عدن حوالي 500 متر، وتتراوح ملوحة مياهه بين 35.5% على طول الساحل إلى 37.3% في الوسط.
+
+تبلغ مساحته حوالي 530 ألف كيلومتر مربع، يمتد طوله من الشمال للجنوب حوالي 1480 كيلومترا، ويبلغ عرضه تقريبا 480 كيلومترا، وتمتد على طوله سلسلة جبال شيبا</p>
+    `;
+
+    // إدراج المحتوى في المودال
+    $('#modalContent').html(welcomeMessage);
+
+    // فتح المودال
+    var modal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+    modal.show();
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+  $('#welcomeBtn1').on('click', function() {
+    // محتوى المودال مباشرةً هنا
+    var welcomeMessage = `
+      <p>مرحباً بك في موقعنا! 😊</p>
+      <p>يقع ميناء عدن على الخط الملاحي الدولي الذي يربط الشرق بالغرب،
+ ولا تحتاج السفن لأكثر من 4 أميال بحرية فقط لتغيير اتجاهها للوصول إلى محطة إرشاد الميناء. ويتميز الميناء بأنه محمي طبيعياً من الأمواج، 
+والرياح الموسمية الشمالية الشرقية، والجنوبية الغربية، وذلك لأنه يقع بين مرتفعي جبل شمسان على بعد 553 متر وجبل المزلقم على بعد 374 متر، 
+مما يمكنه من العمل دون توقف طوال العام. ويغطي الميناء مساحة مقدرة بـ 8 ميل بحري من الشرق إلى الغرب و5 ميل بحري من الشمال إلى الجنوب.</p>
+    `;
+
+    // إدراج المحتوى في المودال
+    $('#modalContent1').html(welcomeMessage);
+
+    // فتح المودال
+    var modal = new bootstrap.Modal(document.getElementById('welcomeModal1'));
+    modal.show();
+  });
+});
+</script>
+
+
+</body>
+</html>

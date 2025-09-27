@@ -1,0 +1,90 @@
+
+/* ===== Reset ===== */
+*
+
+
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #007bff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* ===== Map Container ===== */
+.map-container img {
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+.card {
+  max-width: 320px;   /* العرض الأقصى للكارد */
+  margin: auto;       /* يوسّط الكارد في العمود */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 200px;      /* طول ثابت للصور */
+  object-fit: cover;  /* يخلي الصورة متناسقة بدون تمدد */
+}
+
+.card-body {
+  text-align: center; /* النصوص في الوسط */
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #007bff;     /* لون مميز للعناوين */
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}

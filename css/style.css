@@ -1,0 +1,77 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  background-color: #f9f9f9;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #f8f9fa;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+/* ===== Map Container ===== */
+.map-container img {
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
