@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إب</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ضبط ارتفاع الكاروسيل */
+    #ibbCarousel {
+      max-height: 450px;
+      max-width: 450px;
+      overflow: hidden;
+      border-radius: 20px;
+
+    }
+
+    #ibbCarousel img {
+      height: 450px;
+      width: 450px;
+      object-fit: cover;
+    }
+
+    /* الحاوية الشفافة */
+    .carousel-container {
+      width: 550px;
+      height: 550px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(58deg, #0d6efd, transparent);
+      border-radius: 20px;
+    }
+
+    /* أزرار شفافة */
+    .carousel-control-prev,
+    .carousel-control-next {
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1);
+      /* يخليها بيضاء */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="bg-primary text-white text-center p-4">
+    <h1>مدينة إب</h1>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link fw-bold" href="../index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="sanaa.html">صنعاء</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="aden.html">عدن</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="ibb.html">إب</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <section class="text-center mb-4">
+      <h2>نبذة عن مدينة إب</h2>
+      <p class="lead">
+        إب مدينة جبلية خضراء، تشتهر بالمزارع والجبال والأكلات الشعبية،
+        ويحب أهلها الاحتفال بالمناسبات الاجتماعية التقليدية.
+      </p>
+    </section>
+
+    <!-- الكاروسيل في حاوية شفافة -->
+    <div class="container d-flex justify-content-center">
+      <div class="carousel-container shadow-lg p-0 rounded">
+        <div id="ibbCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- العنصر الأول -->
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="../images/اب3.jpg" class="d-block w-100" alt="جبال إب">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                <h5>الجبال</h5>
+                <p>مناظر طبيعية خلابة تغطيها الخضرة وتعتبر مقصدًا للسياح.</p>
+              </div>
+            </div>
+
+            <!-- العنصر الثاني -->
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="../images/اب4.jpg" class="d-block w-100" alt="مزارع إب">
+              <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                <h5>المزارع</h5>
+                <p>تشتهر بزراعة الخضروات والفواكه، وتعكس الحياة الريفية في إب.</p>
+              </div>
+
+              
+            </div>
+  <!-- أزرار التنقل -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#ibbCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">السابق</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#ibbCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">التالي</span>
+          </button>
+
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white text-center p-3 mt-4">
+    <p>جميع الحقوق محفوظة &copy; 2025</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

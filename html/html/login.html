@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول / إنشاء حساب</title>
+  <link rel="stylesheet" href="../css/login.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Toastify JS -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="auth-box">
+      
+      <!-- تسجيل الدخول -->
+      <div class="login-section active">
+        <h2>تسجيل الدخول</h2>
+        <form id="login-form">
+          <label for="login-email">البريد الإلكتروني</label>
+          <input type="email" id="login-email" placeholder="example@mail.com" required>
+          
+          <label for="login-password">كلمة المرور</label>
+          <input type="password" id="login-password" placeholder="كلمة المرور" required>
+          
+          <button type="submit" class="btn">تسجيل الدخول</button>
+        </form>
+        <p class="switch-text">ليس لديك حساب؟ <span class="switch-btn" onclick="toggleForm()">إنشاء حساب</span></p>
+      </div>
+
+      <!-- إنشاء حساب -->
+      <div class="signup-section">
+        <h2>إنشاء حساب</h2>
+        <form id="signup-form">
+          <label for="signup-name">الاسم الكامل</label>
+          <input type="text" id="signup-name" placeholder="اسمك" required>
+
+          <label for="signup-email">البريد الإلكتروني</label>
+          <input type="email" id="signup-email" placeholder="example@mail.com" required>
+
+          <label for="signup-password">كلمة المرور</label>
+          <input type="password" id="signup-password" placeholder="كلمة المرور" required>
+
+          <button type="submit" class="btn">إنشاء الحساب</button>
+        </form>
+        <p class="switch-text">لديك حساب بالفعل؟ <span class="switch-btn" onclick="toggleForm()">تسجيل الدخول</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // دالة التوست
+    function showToast(message, type = "info") {
+      Toastify({
+        text: message,
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: type === "success" 
+          ? "linear-gradient(to right, #00b09b, #96c93d)" 
+          : type === "error"
+          ? "linear-gradient(to right, #e52d27, #b31217)" 
+          : "linear-gradient(to right, #3a7bd5, #3a6073)",
+        stopOnFocus: true,
+      }).showToast();
+    }
+
+    // التبديل بين تسجيل الدخول / التسجيل
+    function toggleForm() {
+      $('.login-section').toggleClass('active');
+      $('.signup-section').toggleClass('active');
+    }
+
+    // إنشاء الحساب
+    $('#signup-form').submit(function(e) {
+      e.preventDefault();
+      const name = $('#signup-name').val();
+      const email = $('#signup-email').val();
+      const password = $('#signup-password').val();
+
+      let users = JSON.parse(localStorage.getItem('users') || '[]');
+      if(users.find(u => u.email === email)){
+        showToast('هذا البريد مسجل مسبقاً!', 'error');
+        return;
+      }
+
+      users.push({name, email, password});
+      localStorage.setItem('users', JSON.stringify(users));
+      showToast('تم إنشاء الحساب بنجاح!', 'success');
+      toggleForm(); 
+    });
+
+    // تسجيل الدخول
+    $('#login-form').submit(function(e){
+      e.preventDefault();
+      const email = $('#login-email').val();
+      const password = $('#login-password').val();
+
+      let users = JSON.parse(localStorage.getItem('users') || '[]');
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if(user){
+        showToast('تم تسجيل الدخول! مرحباً ' + user.name, 'success');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1000);
+      } else {
+        showToast('البريد الإلكتروني أو كلمة المرور غير صحيحة!', 'error');
+      }
+    });
+  </script>
+</body>
+</html>

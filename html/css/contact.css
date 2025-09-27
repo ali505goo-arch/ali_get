@@ -1,0 +1,166 @@
+/* ===== Reset عام ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+:root {
+  --primary: #007bff;
+  --muted: #666;
+  --bg-light: #f9f9f9;
+  --card-bg: #fff;
+  --radius: 12px;
+}
+
+/* ===== الجسم ===== */
+body {
+  background: var(--bg-light);
+  padding: 2rem;
+  color: #333;
+}
+
+/* ===== الحاوية الرئيسية ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== البطاقة ===== */
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+/* ===== المحتوى الرئيسي ===== */
+main header {
+  margin-bottom: 1.5rem;
+}
+
+main header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: .5rem;
+}
+
+main header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ===== النموذج ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: .3rem;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+
+/* ===== الأزرار ===== */
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+/* ===== العمود الجانبي ===== */
+aside .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+aside h3,
+aside h4 {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.item .icon {
+  background: var(--primary);
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+
+
+/* ===== نص الفوتر الصغير ===== */
+.container > p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== استجابة الشاشات الصغيرة ===== */
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  .row {
+    flex-direction: column;
+  }
+}

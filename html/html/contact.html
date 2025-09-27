@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تواصل معنا</title>
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ملف CSS خارجي -->
+<link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <main>
+        <header>
+          <h1>تواصل معنا</h1>
+          <p>هل لديك سؤال أو اقتراح؟ اكتب لنا وسنعود إليك في أقرب وقت ممكن.</p>
+        </header>
+
+        <form action="#" method="post" onsubmit="event.preventDefault();alert('تم إرسال النموذج! (هذه صفحة مثال)');">
+          <div class="row">
+            <div class="col">
+              <label for="name">الاسم</label>
+              <input type="text" id="name" name="name" placeholder="اسمك" required>
+            </div>
+            <div class="col">
+              <label for="phone">الهاتف</label>
+              <input type="text" id="phone" name="phone" placeholder="رقم الهاتف">
+              
+            </div>
+          </div>
+
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+          <label for="message">الرسالة</label>
+          <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+          <div style="display:flex;justify-content:flex-start;gap:12px;align-items:center;margin-top:6px">
+            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane" style="margin-left:8px"></i> إرسال</button>
+            <small style="color:var(--muted)">سنحترم خصوصيتك — لن نشارك بياناتك.</small>
+          </div>
+        </form>
+
+      </main>
+
+      <aside>
+        <div class="info">
+          <div>
+            <h3 style="margin:0 0 8px">معلومات الاتصال</h3>
+            <p style="margin:0;color:var(--muted)">مكتبنا مفتوح من السبت إلى الخميس 9 صباحاً — 5 مساءً</p>
+          </div>
+
+          <div class="item">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div style="font-weight:600">هاتف</div>
+              <div style="color:var(--muted)">+967 779310645</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div style="font-weight:600">البريد الإلكتروني</div>
+              <div style="color:var(--muted)">ali505gooGmail.com</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div style="font-weight:600">العنوان</div>
+              <div style="color:var(--muted)">صنعاء، اليمن</div>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);margin-top:14px">صمم بواسطة موقعك • نسخة نموذجية للعرض</p>
+  </div>
+</body>
+</html>
